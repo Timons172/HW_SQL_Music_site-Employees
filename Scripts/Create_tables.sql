@@ -11,21 +11,21 @@ CREATE TABLE IF NOT EXISTS Singer(
 CREATE TABLE IF NOT EXISTS Album(
     Album_ID SERIAL PRIMARY KEY,
     Name VARCHAR(60) NOT NULL CHECK(Name != ''),
-    YearOfRelease YEAR CHECK (YEAR >= 1889)
+    YearOfRelease INTEGER CHECK (YearOfRelease >= 1889)
     );
 
 CREATE TABLE IF NOT EXISTS Song(
     Song_ID SERIAL PRIMARY KEY,
     Name VARCHAR(60) NOT NULL CHECK(Name != ''),
     Duration INTEGER NOT NULL,
-    CHECK (Duration > 0 AND Duration < 600)
+    CHECK (Duration > 0 AND Duration < 600),
     Album_ID INTEGER NOT NULL REFERENCES Album(Album_ID)
     );
 
 CREATE TABLE IF NOT EXISTS Collection(
     Collection_ID SERIAL PRIMARY KEY,
     Name VARCHAR(60) NOT NULL CHECK(Name != ''),
-    YearOfRelease YEAR CHECK (YEAR >= 1889)
+    YearOfRelease INTEGER CHECK (YearOfRelease >= 1889)
     );
 
 CREATE TABLE IF NOT EXISTS Genre_Singer(

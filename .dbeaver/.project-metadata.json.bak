@@ -1,0 +1,1 @@
+{"resources":{"Scripts/Create_tables.sql":{"default-schema":"public","default-datasource":"postgres-jdbc-191f1b92180-60eafcca3facc5bd","default-catalog":"Music_site"},"Scripts/Insert_tables.sql":{"default-datasource":"postgres-jdbc-191f1b92180-60eafcca3facc5bd","default-catalog":"Music_site","default-schema":"public"}}}
